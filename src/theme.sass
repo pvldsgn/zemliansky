@@ -1,0 +1,31 @@
+body
+    background-color: #000000
+    overflow: hidden
+    
+@mixin mobile
+    @media (min-width: 320px)
+        @content
+
+@mixin iphonex
+    @media (min-width: 375px)
+        @content
+
+@mixin tablet
+    @media (min-width: 768px)
+        @content
+
+@mixin large
+    @media (min-width: 900px)
+        @content
+
+@mixin desktop
+    @media (min-width: 1280px)
+        @content
+
+@mixin hd
+    @media (min-width: 1600px)
+        @content
+
+@mixin two
+    @media (min-width: 2560px)
+        @content

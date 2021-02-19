@@ -1,0 +1,84 @@
+@import 'theme.sass'
+
+.cards
+    display: flex
+    flex-direction: column
+    overflow-x: hidden
+    min-height: 100vh
+
+    & *
+        -webkit-user-select: none
+        -webkit-user-drag: none
+        -webkit-app-region: no-drag
+
+.cardsList
+    display: flex
+    flex: 1
+    position: relative
+    z-index: 0
+    transition: transform .4s ease
+
+.coverContainer
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    position: absolute
+    z-index: -1
+
+.cover
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    position: absolute
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    object-fit: cover
+    transition: opacity .4s linear
+    z-index: 3
+
+.enter
+    opacity: 0
+
+    &Active
+        opacity: 1
+
+.exit
+    opacity: 1
+
+    &Active
+        opacity: 0
+
+.bullits
+    position: absolute
+    bottom: 20px
+    left: 50%
+    font-size: 0
+    z-index: 2
+    transition: all .4s ease
+    white-space: nowrap
+
+.bullit
+    display: inline-block
+    cursor: pointer
+    padding: 6px
+    transform-origin: center
+
+    span
+        display: block
+        background-color: rgba(white, .5)
+        height: 4px
+        width: 4px
+        border-radius: 4px
+        transition: all .4s ease
+
+    &:hover span
+        background-color: white
+
+.active
+    span
+        background-color: white
+        pointer-events: none
+        width: 40px

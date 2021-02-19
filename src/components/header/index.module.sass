@@ -1,0 +1,27 @@
+@import 'theme.sass'
+
+.header
+    z-index: 1
+    position: fixed
+    left: 0
+    right: 0
+
+header
+    display: flex
+    justify-content: space-between
+    margin: 1.5em
+
+    @include tablet
+        margin: 2em
+
+.social
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: .5em
+
+.name
+    text-decoration: none
+
+    &:hover
+        opacity: .5
+        transition: 0.2s ease
